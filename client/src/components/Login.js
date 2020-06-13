@@ -22,6 +22,7 @@ const Login = (props) => {
       .then((res) => {
         console.log('token', res.data.payload);
         localStorage.setItem('token', res.data.payload);
+        props.history.push('/bubblePage');
       })
       .catch((err) => console.error('error', err.message));
   };
